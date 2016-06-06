@@ -11,6 +11,8 @@
 		3CCF78331D05CF3E00CD94B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78321D05CF3E00CD94B3 /* ViewController.swift */; };
 		3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */; };
 		3CCF78431D05D03D00CD94B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */; };
+		3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */; };
+		3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CCF783C1D05CF3E00CD94B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
+		3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 		3CCF782F1D05CF3E00CD94B3 /* HotBookings */ = {
 			isa = PBXGroup;
 			children = (
+				3CCF78451D05D2B500CD94B3 /* Extensions */,
 				3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */,
 				3CCF78321D05CF3E00CD94B3 /* ViewController.swift */,
 				3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */,
@@ -59,6 +64,15 @@
 				3CCF783C1D05CF3E00CD94B3 /* Info.plist */,
 			);
 			path = HotBookings;
+			sourceTree = "<group>";
+		};
+		3CCF78451D05D2B500CD94B3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */,
+				3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CCF78331D05CF3E00CD94B3 /* ViewController.swift in Sources */,
+				3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */,
 				3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */,
+				3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
