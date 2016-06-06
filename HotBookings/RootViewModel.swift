@@ -12,21 +12,19 @@ struct RootViewModel {
 
     // MARK: - Map data
 
-    /// A location that represents the center of the map
+    /// A location that represents the default center of the map
     static let mapCenter = CLLocationCoordinate2D(latitude: 44.9778, longitude: -93.2650) // Minneapolis
 
     /// Span of the map
     let span = MKCoordinateSpanMake(25.0, 40.0)
 
-    /// An array of locations that will be drawn as pins on the map
+    /// An array of regions that will be drawn as pins on the map
     // TODO: Hardcoded to map center for now
     var locations = [CLLocation(latitude: RootViewModel.mapCenter.latitude, longitude: RootViewModel.mapCenter.longitude)]
 
-    /// Property defining the 'heat' of a location on the heat map
-    var weights = [NSNumber(int: 25)]
-
-    /// Boost property as required by LFHeatMap
-    var boost = Float(0.5)
+    /// An array of hotel locations that are used as data source for the heat map
+    // TODO: Hardcoded to map center for now
+    var hotelLocations = [CLLocation(latitude: RootViewModel.mapCenter.latitude, longitude: RootViewModel.mapCenter.longitude)]
 
     /// Visible region of the map
     var region: MKCoordinateRegion {
@@ -37,7 +35,7 @@ struct RootViewModel {
 
     func heatMapPointValues() -> [NSObject: AnyObject] {
         var pointValues = [NSValue: CDouble]()
-        let points = locations
+        let points = hotelLocations
             .map({MKMapPointForCoordinate($0.coordinate)})
             .map({NSValue(MKMapPoint: $0)})
         for point in points {

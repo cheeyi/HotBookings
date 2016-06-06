@@ -20,14 +20,11 @@ class RootViewController: UIViewController {
 
     let searchForm: UITextField = {
         let textField = UITextField().withAutoLayout()
-        // Styling
         textField.backgroundColor = UIColor.jetBlueLightestGrayColor()
         textField.tintColor = UIColor.jetBlueColor()
         textField.textColor = UIColor.jetBlueColor()
-        // Behavior and left margin
         textField.autocorrectionType = .No
         textField.clearButtonMode = .WhileEditing
-
         return textField
     }()
 
