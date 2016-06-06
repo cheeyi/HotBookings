@@ -12,8 +12,7 @@ class RootViewController: UIViewController {
 
     // MARK: - Properties
 
-    static let mapCenter = CLLocationCoordinate2D(latitude: 40.761267, longitude: -73.98565)
-    let viewModel = RootViewModel(mapCenter: RootViewController.mapCenter, locations: [CLLocation(latitude: RootViewController.mapCenter.latitude, longitude: RootViewController.mapCenter.longitude)], span: MKCoordinateSpanMake(0.5, 0.5))
+    let viewModel = RootViewModel()
 
     // MARK: - Subviews
 
