@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0292BF331D05FFE00095C6C5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0292BF321D05FFE00095C6C5 /* LocationManager.swift */; };
 		3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */; };
 		3CCF78331D05CF3E00CD94B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */; };
 		3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0292BF321D05FFE00095C6C5 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		3CCF782D1D05CF3E00CD94B3 /* HotBookings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotBookings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				3CCF78501D05D63E00CD94B3 /* CompactConstraint */,
 				3CCF78451D05D2B500CD94B3 /* Extensions */,
 				3CCF78631D05F76C00CD94B3 /* LFHeatMap */,
+				0292BF321D05FFE00095C6C5 /* LocationManager.swift */,
 			);
 			path = HotBookings;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				3CCF78331D05CF3E00CD94B3 /* RootViewController.swift in Sources */,
 				3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */,
+				0292BF331D05FFE00095C6C5 /* LocationManager.swift in Sources */,
 				3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */,
 				3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */,
 				3CCF78661D05F76C00CD94B3 /* LFHeatMap.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreLocation
 class RootViewController: UIViewController {
 
     // MARK: - Properties
@@ -39,6 +39,7 @@ class RootViewController: UIViewController {
         setupViewHierarchy()
         setupMapView()
         setupConstraints()
+        determineCity()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -91,6 +92,21 @@ class RootViewController: UIViewController {
         heatMapImageView.bottomAnchor.constraintEqualToAnchor(mapView.bottomAnchor).active = true
         heatMapImageView.heightAnchor.constraintEqualToAnchor(mapView.heightAnchor).active = true
         view.bringSubviewToFront(heatMapImageView)
+    }
+
+    private func determineCity() {
+        // Request for location permission
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            LocationManager.sharedLocationManager.requestAuthorization()
+            // TODO: LocationManager needs to fire notification or something to notify VC of city found in this case
+        }
+        else {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            LocationManager.sharedLocationManager.startUpdatingLocation({
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                self.searchForm.text = LocationManager.sharedLocationManager.currentCityName
+            })
+        }
     }
 }
 
