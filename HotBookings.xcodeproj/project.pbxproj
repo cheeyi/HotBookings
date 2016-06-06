@@ -13,6 +13,8 @@
 		3CCF78431D05D03D00CD94B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */; };
 		3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */; };
 		3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */; };
+		3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */; };
+		3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,12 @@
 		3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
 		3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		3CCF784F1D05D5AB00CD94B3 /* HotBookings-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HotBookings-Bridging-Header.h"; sourceTree = "<group>"; };
+		3CCF78511D05D63E00CD94B3 /* CompactConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompactConstraint.h; sourceTree = "<group>"; };
+		3CCF78521D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+CompactConstraint.h"; sourceTree = "<group>"; };
+		3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+CompactConstraint.m"; sourceTree = "<group>"; };
+		3CCF78541D05D63E00CD94B3 /* UIView+CompactConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CompactConstraint.h"; sourceTree = "<group>"; };
+		3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CompactConstraint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,12 @@
 		3CCF782F1D05CF3E00CD94B3 /* HotBookings */ = {
 			isa = PBXGroup;
 			children = (
+				3CCF78501D05D63E00CD94B3 /* CompactConstraint */,
 				3CCF78451D05D2B500CD94B3 /* Extensions */,
 				3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */,
 				3CCF78321D05CF3E00CD94B3 /* ViewController.swift */,
 				3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */,
+				3CCF784F1D05D5AB00CD94B3 /* HotBookings-Bridging-Header.h */,
 				3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */,
 				3CCF783C1D05CF3E00CD94B3 /* Info.plist */,
 			);
@@ -73,6 +83,18 @@
 				3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3CCF78501D05D63E00CD94B3 /* CompactConstraint */ = {
+			isa = PBXGroup;
+			children = (
+				3CCF78511D05D63E00CD94B3 /* CompactConstraint.h */,
+				3CCF78521D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.h */,
+				3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */,
+				3CCF78541D05D63E00CD94B3 /* UIView+CompactConstraint.h */,
+				3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */,
+			);
+			path = CompactConstraint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +169,8 @@
 			files = (
 				3CCF78331D05CF3E00CD94B3 /* ViewController.swift in Sources */,
 				3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */,
+				3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */,
+				3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */,
 				3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */,
 				3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */,
 			);
