@@ -8,3 +8,4 @@
 
 #import "CompactConstraint.h" 
 #import "LFHeatMap.h"
+#import "NSValue+MKMapPoint.h"

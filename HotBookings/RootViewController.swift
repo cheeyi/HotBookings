@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DTMHeatmap
 
 class RootViewController: UIViewController {
 
@@ -30,20 +31,20 @@ class RootViewController: UIViewController {
     }()
 
     let mapView = MKMapView().withAutoLayout()
-    let heatMapImageView = UIImageView().withAutoLayout()
+    let heatmapOverlay = DTMHeatmap()
 
     // MARK: - View Controller lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewHierarchy()
+        setupHeatMap()
         setupMapView()
         setupConstraints()
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        setupHeatMapImageView()
     }
 
     // MARK: - Private Helpers
@@ -53,44 +54,37 @@ class RootViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         title = "Hot Bookings"
-        view.addSubviews([searchForm, mapView, heatMapImageView])
+        view.addSubviews([searchForm, mapView])
+    }
+
+    private func setupHeatMap() {
+        heatmapOverlay.setData(viewModel.heatMapPointValues())
     }
 
     private func setupMapView() {
         mapView.delegate = self
+        mapView.rotateEnabled = false
+        mapView.addOverlay(heatmapOverlay)
         mapView.setRegion(viewModel.region, animated: true)
-        mapView.userInteractionEnabled = false // Because the heat map overlay is static
         addMapAnnotations(viewModel.locations)
-    }
-
-    private func setupHeatMapImageView() {
-        let heatMap = LFHeatMap.heatMapForMapView(mapView, boost: viewModel.boost, locations: viewModel.locations, weights: viewModel.weight)
-        heatMapImageView.contentMode = .Center
-        heatMapImageView.image = heatMap
     }
 
     private func setupConstraints() {
         let relationships = [
             "H:|-[searchForm]-|",
             "H:|-[mapView]-|",
-            "H:|-[heatMapImageView]-|",
             "V:[topLayoutGuide]-[searchForm]-[mapView]-(verticalMargin)-|"
         ]
 
         let views = [
             "searchForm": searchForm,
             "mapView": mapView,
-            "heatMapImageView": heatMapImageView,
             "topLayoutGuide": topLayoutGuide
         ]
 
         let metrics = ["verticalMargin": CGFloat(8)]
 
         view.addCompactConstraints(relationships, metrics: metrics, views: views as [NSObject : AnyObject])
-        heatMapImageView.topAnchor.constraintEqualToAnchor(mapView.topAnchor).active = true
-        heatMapImageView.bottomAnchor.constraintEqualToAnchor(mapView.bottomAnchor).active = true
-        heatMapImageView.heightAnchor.constraintEqualToAnchor(mapView.heightAnchor).active = true
-        view.bringSubviewToFront(heatMapImageView)
     }
 }
 
@@ -107,6 +101,10 @@ extension RootViewController: MKMapViewDelegate {
             annotationView.pinTintColor = UIColor.greenerPasturesColor()
         }
         return annotationView
+    }
+
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        return DTMHeatmapRenderer(overlay: overlay)
     }
 
     /// Adds `MKPointAnnotations` for each `CLLocation` in the locations array
