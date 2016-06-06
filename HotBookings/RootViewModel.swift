@@ -15,11 +15,18 @@ struct RootViewModel {
     /// A location that represents the center of the map
     static let mapCenter = CLLocationCoordinate2D(latitude: 44.9778, longitude: -93.2650) // Minneapolis
 
-    /// An array of locations that will be drawn as pins on the map
-    let locations = [CLLocation(latitude: RootViewModel.mapCenter.latitude, longitude: RootViewModel.mapCenter.longitude)]
-
     /// Span of the map
-    let span = MKCoordinateSpanMake(0.5, 0.5)
+    let span = MKCoordinateSpanMake(10.0, 13.0)
+
+    /// An array of locations that will be drawn as pins on the map
+    // TODO: Hardcoded to map center for now
+    var locations = [CLLocation(latitude: RootViewModel.mapCenter.latitude, longitude: RootViewModel.mapCenter.longitude)]
+
+    /// Property defining the 'heat' of a location on the heat map
+    var weight = [NSNumber(int: 25)]
+
+    /// Boost property as required by LFHeatMap
+    var boost = Float(1.0)
 
     /// Visible region of the map
     var region: MKCoordinateRegion {
