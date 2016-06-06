@@ -3,5 +3,7 @@ target 'HotBookings' do
   use_frameworks!
 
   # Pods for HotBookings
+pod "LFHeatMap"
+pod 'Alamofire', '~> 3.4'
 
 end
