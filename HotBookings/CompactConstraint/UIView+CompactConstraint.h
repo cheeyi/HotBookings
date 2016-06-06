@@ -5,11 +5,7 @@
 
 #import "NSLayoutConstraint+CompactConstraint.h"
 
-#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-    #define CCView UIView
-#elif TARGET_OS_MAC
-    #define CCView NSView
-#endif
+#define CCView UIView
 
 @interface CCView (CompactConstraint)
 

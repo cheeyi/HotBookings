@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */; };
-		3CCF78331D05CF3E00CD94B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78321D05CF3E00CD94B3 /* ViewController.swift */; };
+		3CCF78331D05CF3E00CD94B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */; };
 		3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */; };
 		3CCF78431D05D03D00CD94B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */; };
 		3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */; };
 		3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */; };
 		3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */; };
 		3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */; };
+		3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */; };
+		3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CCF782D1D05CF3E00CD94B3 /* HotBookings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotBookings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CCF78321D05CF3E00CD94B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3CCF783C1D05CF3E00CD94B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+CompactConstraint.m"; sourceTree = "<group>"; };
 		3CCF78541D05D63E00CD94B3 /* UIView+CompactConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CompactConstraint.h"; sourceTree = "<group>"; };
 		3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CompactConstraint.m"; sourceTree = "<group>"; };
+		3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineNavigationBarTitleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +68,15 @@
 		3CCF782F1D05CF3E00CD94B3 /* HotBookings */ = {
 			isa = PBXGroup;
 			children = (
-				3CCF78501D05D63E00CD94B3 /* CompactConstraint */,
-				3CCF78451D05D2B500CD94B3 /* Extensions */,
 				3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */,
-				3CCF78321D05CF3E00CD94B3 /* ViewController.swift */,
+				3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */,
+				3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */,
 				3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */,
 				3CCF784F1D05D5AB00CD94B3 /* HotBookings-Bridging-Header.h */,
 				3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */,
 				3CCF783C1D05CF3E00CD94B3 /* Info.plist */,
+				3CCF78501D05D63E00CD94B3 /* CompactConstraint */,
+				3CCF78451D05D2B500CD94B3 /* Extensions */,
 			);
 			path = HotBookings;
 			sourceTree = "<group>";
@@ -80,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */,
+				3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */,
 				3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */,
 			);
 			path = Extensions;
@@ -167,10 +173,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCF78331D05CF3E00CD94B3 /* ViewController.swift in Sources */,
+				3CCF78331D05CF3E00CD94B3 /* RootViewController.swift in Sources */,
+				3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */,
 				3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */,
 				3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */,
 				3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */,
+				3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */,
 				3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */,
 				3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */,
 			);
@@ -270,6 +278,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.expedia.HotBookings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HotBookings/HotBookings-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -281,6 +290,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.expedia.HotBookings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HotBookings/HotBookings-Bridging-Header.h";
 			};
 			name = Release;
 		};
