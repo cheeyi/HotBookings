@@ -17,6 +17,7 @@
 		3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */; };
 		3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */; };
 		3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */; };
+		B2FFA70E8DD6D3A09A1AABD6 /* Pods_HotBookings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,9 @@
 		3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CompactConstraint.m"; sourceTree = "<group>"; };
 		3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineNavigationBarTitleView.swift; sourceTree = "<group>"; };
+		68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.debug.xcconfig"; sourceTree = "<group>"; };
+		784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.release.xcconfig"; sourceTree = "<group>"; };
+		F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotBookings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2FFA70E8DD6D3A09A1AABD6 /* Pods_HotBookings.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +59,8 @@
 			children = (
 				3CCF782F1D05CF3E00CD94B3 /* HotBookings */,
 				3CCF782E1D05CF3E00CD94B3 /* Products */,
+				6BEEB28250F0FD3722CCBDE5 /* Pods */,
+				B4CCDAC3E64C4AECAD5E9E0A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +110,23 @@
 			path = CompactConstraint;
 			sourceTree = "<group>";
 		};
+		6BEEB28250F0FD3722CCBDE5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */,
+				784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B4CCDAC3E64C4AECAD5E9E0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,9 +134,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3CCF783F1D05CF3E00CD94B3 /* Build configuration list for PBXNativeTarget "HotBookings" */;
 			buildPhases = (
+				E7DCDC623395B8D4479F02E2 /* [CP] Check Pods Manifest.lock */,
 				3CCF78291D05CF3E00CD94B3 /* Sources */,
 				3CCF782A1D05CF3E00CD94B3 /* Frameworks */,
 				3CCF782B1D05CF3E00CD94B3 /* Resources */,
+				9E1334828AB87DED264A0BA7 /* [CP] Embed Pods Frameworks */,
+				6BEE86659F6B0041445983D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,6 +194,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BEE86659F6B0041445983D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E1334828AB87DED264A0BA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7DCDC623395B8D4479F02E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3CCF78291D05CF3E00CD94B3 /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		3CCF78401D05CF3E00CD94B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotBookings/Info.plist;
@@ -284,6 +360,7 @@
 		};
 		3CCF78411D05CF3E00CD94B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HotBookings/Info.plist;
@@ -313,6 +390,7 @@
 				3CCF78411D05CF3E00CD94B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

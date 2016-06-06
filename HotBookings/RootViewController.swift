@@ -20,15 +20,12 @@ class RootViewController: UIViewController {
         let textField = UITextField().withAutoLayout()
         // Styling
         textField.backgroundColor = UIColor.jetBlueLightestGrayColor()
-        textField.tintColor = UIColor.blackColor()
+        textField.tintColor = UIColor.jetBlueColor()
         textField.textColor = UIColor.jetBlueColor()
-        textField.layer.cornerRadius = 5
-        textField.layer.borderColor = UIColor.clearColor().CGColor
         // Behavior and left margin
         textField.autocorrectionType = .No
         textField.clearButtonMode = .WhileEditing
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 1)).withAutoLayout()
-        textField.leftViewMode = .Always
+
         return textField
     }()
 
@@ -46,14 +43,14 @@ class RootViewController: UIViewController {
         view.backgroundColor = UIColor.whiteColor()
         navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-        title = "HotBookings"
+        title = "Hot Bookings"
         view.addSubviews([searchForm])
     }
 
     private func setupConstraints() {
         let relationships = [
             "H:|-[searchForm]-|",
-            "V:[topLayoutGuide]-[searchForm(==40)]"
+            "V:[topLayoutGuide]-[searchForm]"
         ]
 
         let views = [
