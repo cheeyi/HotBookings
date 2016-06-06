@@ -40,7 +40,11 @@ class RootViewController: UIViewController {
         setupMapView()
         setupConstraints()
         determineCity()
-    }
+
+        let _ = HotRequest.fetchHeatMapData { (result) in
+            // TODO:
+        }
+}
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
