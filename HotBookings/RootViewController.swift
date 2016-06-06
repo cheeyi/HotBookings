@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Alamofire
 
 class RootViewController: UIViewController {
 
     // MARK: - Properties
 
-    let viewModel = RootViewModel()
+    static let mapCenter = CLLocationCoordinate2D(latitude: 40.761267, longitude: -73.98565)
+    let viewModel = RootViewModel(mapCenter: RootViewController.mapCenter, locations: [CLLocation(latitude: RootViewController.mapCenter.latitude, longitude: RootViewController.mapCenter.longitude)], span: MKCoordinateSpanMake(0.5, 0.5))
 
     // MARK: - Subviews
 
@@ -30,11 +30,14 @@ class RootViewController: UIViewController {
         return textField
     }()
 
+    let mapView = MKMapView().withAutoLayout()
+
     // MARK: - View Controller lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewHierarchy()
+        setupMapView()
         setupConstraints()
     }
 
@@ -45,22 +48,45 @@ class RootViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         title = "Hot Bookings"
-        view.addSubviews([searchForm])
+        view.addSubviews([searchForm, mapView])
+    }
+
+    private func setupMapView() {
+        mapView.delegate = self
+        mapView.setRegion(viewModel.region, animated: true)
     }
 
     private func setupConstraints() {
         let relationships = [
             "H:|-[searchForm]-|",
-            "V:[topLayoutGuide]-[searchForm]"
+            "H:|-[mapView]-|",
+            "V:[topLayoutGuide]-[searchForm]-[mapView]-(verticalMargin)-|"
         ]
 
         let views = [
             "searchForm": searchForm,
+            "mapView": mapView,
             "topLayoutGuide": topLayoutGuide
         ]
 
-        let metrics = ["topMargin": CGFloat(8)]
+        let metrics = ["verticalMargin": CGFloat(8)]
 
         view.addCompactConstraints(relationships, metrics: metrics, views: views as [NSObject : AnyObject])
+    }
+}
+
+extension RootViewController: MKMapViewDelegate {
+
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView: MKPinAnnotationView
+
+        if let pinAnnotationView = mapView.dequeueReusableAnnotationViewWithIdentifier("mapAnnotationPinIdentifier") as? MKPinAnnotationView {
+            pinAnnotationView.annotation = annotation
+            annotationView = pinAnnotationView
+        } else {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "mapAnnotationPinIdentifier")
+            annotationView.pinTintColor = UIColor.firstClassBlueColor()
+        }
+        return annotationView
     }
 }
