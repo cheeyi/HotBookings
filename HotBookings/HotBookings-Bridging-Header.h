@@ -7,3 +7,4 @@
 //
 
 #import "CompactConstraint.h" 
+#import "LFHeatMap.h"

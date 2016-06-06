@@ -17,6 +17,7 @@
 		3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */; };
 		3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */; };
 		3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */; };
+		3CCF78661D05F76C00CD94B3 /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78651D05F76C00CD94B3 /* LFHeatMap.m */; };
 		B2FFA70E8DD6D3A09A1AABD6 /* Pods_HotBookings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,10 @@
 		3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CompactConstraint.m"; sourceTree = "<group>"; };
 		3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineNavigationBarTitleView.swift; sourceTree = "<group>"; };
+		3CCF785F1D05F6F100CD94B3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/HotBookings-cuqfmwmrriglpecjzntbrixgwofh/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		3CCF78601D05F6F100CD94B3 /* LFHeatMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LFHeatMap.framework; path = "../../../Library/Developer/Xcode/DerivedData/HotBookings-cuqfmwmrriglpecjzntbrixgwofh/Build/Products/Debug-iphonesimulator/LFHeatMap/LFHeatMap.framework"; sourceTree = "<group>"; };
+		3CCF78641D05F76C00CD94B3 /* LFHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHeatMap.h; sourceTree = "<group>"; };
+		3CCF78651D05F76C00CD94B3 /* LFHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHeatMap.m; sourceTree = "<group>"; };
 		68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.debug.xcconfig"; sourceTree = "<group>"; };
 		784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.release.xcconfig"; sourceTree = "<group>"; };
 		F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotBookings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +89,7 @@
 				3CCF783C1D05CF3E00CD94B3 /* Info.plist */,
 				3CCF78501D05D63E00CD94B3 /* CompactConstraint */,
 				3CCF78451D05D2B500CD94B3 /* Extensions */,
+				3CCF78631D05F76C00CD94B3 /* LFHeatMap */,
 			);
 			path = HotBookings;
 			sourceTree = "<group>";
@@ -110,6 +116,15 @@
 			path = CompactConstraint;
 			sourceTree = "<group>";
 		};
+		3CCF78631D05F76C00CD94B3 /* LFHeatMap */ = {
+			isa = PBXGroup;
+			children = (
+				3CCF78641D05F76C00CD94B3 /* LFHeatMap.h */,
+				3CCF78651D05F76C00CD94B3 /* LFHeatMap.m */,
+			);
+			path = LFHeatMap;
+			sourceTree = "<group>";
+		};
 		6BEEB28250F0FD3722CCBDE5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +137,8 @@
 		B4CCDAC3E64C4AECAD5E9E0A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3CCF785F1D05F6F100CD94B3 /* Alamofire.framework */,
+				3CCF78601D05F6F100CD94B3 /* LFHeatMap.framework */,
 				F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */,
 			);
 			name = Frameworks;
@@ -252,6 +269,7 @@
 				3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */,
 				3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */,
 				3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */,
+				3CCF78661D05F76C00CD94B3 /* LFHeatMap.m in Sources */,
 				3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */,
 				3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */,
 				3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */,
