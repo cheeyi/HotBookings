@@ -8,6 +8,7 @@
 
 import UIKit
 import DTMHeatmap
+import CoreLocation
 
 class RootViewController: UIViewController {
 
@@ -41,6 +42,7 @@ class RootViewController: UIViewController {
         setupHeatMap()
         setupMapView()
         setupConstraints()
+        determineCity()
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -85,6 +87,21 @@ class RootViewController: UIViewController {
         let metrics = ["verticalMargin": CGFloat(8)]
 
         view.addCompactConstraints(relationships, metrics: metrics, views: views as [NSObject : AnyObject])
+    }
+
+    private func determineCity() {
+        // Request for location permission
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            LocationManager.sharedLocationManager.requestAuthorization()
+            // TODO: LocationManager needs to fire notification or something to notify VC of city found in this case
+        }
+        else {
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            LocationManager.sharedLocationManager.startUpdatingLocation({
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                self.searchForm.text = LocationManager.sharedLocationManager.currentCityName
+            })
+        }
     }
 }
 
