@@ -9,19 +9,17 @@
 /* Begin PBXBuildFile section */
 		3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */; };
 		3CCF78331D05CF3E00CD94B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78321D05CF3E00CD94B3 /* ViewController.swift */; };
-		3CCF78361D05CF3E00CD94B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78341D05CF3E00CD94B3 /* Main.storyboard */; };
 		3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */; };
-		3CCF783B1D05CF3E00CD94B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78391D05CF3E00CD94B3 /* LaunchScreen.storyboard */; };
+		3CCF78431D05D03D00CD94B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3CCF782D1D05CF3E00CD94B3 /* HotBookings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotBookings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CCF78321D05CF3E00CD94B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3CCF78351D05CF3E00CD94B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3CCF783A1D05CF3E00CD94B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3CCF783C1D05CF3E00CD94B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +54,8 @@
 			children = (
 				3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */,
 				3CCF78321D05CF3E00CD94B3 /* ViewController.swift */,
-				3CCF78341D05CF3E00CD94B3 /* Main.storyboard */,
 				3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */,
-				3CCF78391D05CF3E00CD94B3 /* LaunchScreen.storyboard */,
+				3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */,
 				3CCF783C1D05CF3E00CD94B3 /* Info.plist */,
 			);
 			path = HotBookings;
@@ -122,9 +119,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CCF783B1D05CF3E00CD94B3 /* LaunchScreen.storyboard in Resources */,
 				3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */,
-				3CCF78361D05CF3E00CD94B3 /* Main.storyboard in Resources */,
+				3CCF78431D05D03D00CD94B3 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,25 +137,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		3CCF78341D05CF3E00CD94B3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CCF78351D05CF3E00CD94B3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3CCF78391D05CF3E00CD94B3 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3CCF783A1D05CF3E00CD94B3 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3CCF783D1D05CF3E00CD94B3 /* Debug */ = {
