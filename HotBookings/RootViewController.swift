@@ -14,7 +14,7 @@ class RootViewController: UIViewController {
 
     // MARK: - Properties
 
-    let viewModel = RootViewModel()
+    var viewModel = RootViewModel()
 
     // MARK: - Subviews
 
@@ -36,7 +36,6 @@ class RootViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewHierarchy()
-        setupHeatMap()
         setupMapView()
         setupConstraints()
         determineCity()
@@ -44,19 +43,16 @@ class RootViewController: UIViewController {
         let _ = HotRequest.fetchHeatMapData { (result) in
             // TODO:
         }
-}
+    }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        drawHeatMap()
     }
 
     func pushDetails(regionID: String) {
-
-        var hotels = [Hotel]()
-        let hotel = Hotel(regionID: "", hotelID: "", lat: 0, long: 0, viewCount: 10, bookCount: 20, name: "Hotel Name")
-        hotels.append(hotel)
-        let viewController = HotelListViewController(hotels: hotels, regionName: "Example Region")
-        self.navigationController?.pushViewController(viewController, animated: true)
+        let viewController = HotelListViewController(hotels: viewModel.hotels, regionName: "Region Name")
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     // MARK: - Private Helpers
@@ -69,7 +65,8 @@ class RootViewController: UIViewController {
         view.addSubviews([searchForm, mapView])
     }
 
-    private func setupHeatMap() {
+    private func drawHeatMap() {
+        viewModel.updateHotelLocationsAndWeights()
         heatmapOverlay.setData(viewModel.heatMapPointValues())
     }
 
