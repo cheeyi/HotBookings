@@ -10,6 +10,7 @@ import UIKit
 import DTMHeatmap
 import CoreLocation
 
+
 class RootViewController: UIViewController {
 
     // MARK: - Properties
@@ -40,9 +41,7 @@ class RootViewController: UIViewController {
         setupConstraints()
         determineCity()
 
-        let _ = HotRequest.fetchHeatMapData { (result) in
-            // TODO:
-        }
+        viewModel.requestData()
     }
 
     override func viewWillAppear(animated: Bool) {

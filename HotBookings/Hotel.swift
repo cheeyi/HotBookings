@@ -11,9 +11,9 @@ import Foundation
 struct Hotel {
     let regionID: String
     let hotelID: String
-    let lat: Double
-    let long: Double
-    let viewCount: Int
-    let bookCount: Int
+    var lat: Double?
+    var long: Double?
+    let viewCount: Int?
+    let bookCount: Int?
     let name: String
 }
