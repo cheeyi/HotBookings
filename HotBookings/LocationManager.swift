@@ -35,7 +35,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
 
-    func startUpdatingLocation(completion:()->Void) {
+    func startUpdatingLocation(completion:() -> Void) {
         debugPrint("Starting Location Updates")
         locationManager.startUpdatingLocation()
 
@@ -69,8 +69,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         geocoder.reverseGeocodeLocation(self.currentLocation!, completionHandler: { (placemarks, e) -> Void in
             if let _ = e {
                 debugPrint("Error:  \(e!.localizedDescription)")
-            }
-            else {
+            } else {
                 let placemark = placemarks!.last! as CLPlacemark
 
                 self.currentCityName = placemark.locality!
@@ -84,7 +83,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         debugPrint("Update Location Error : \(error.description)")
     }
 
-    func printLocation(currentLocation: CLLocation){
+    func printLocation(currentLocation: CLLocation) {
         debugPrint ("Current city: \(currentCityName)")
     }
 

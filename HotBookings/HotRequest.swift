@@ -13,6 +13,6 @@ typealias HotRequestClosure = (Result<[Hotel], NSError> -> Void)
 
 struct HotRequest {
     static func fetchHeatMapData(completion: HotRequestClosure) {
-        
+
     }
 }

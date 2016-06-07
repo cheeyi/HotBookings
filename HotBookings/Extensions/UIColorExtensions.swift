@@ -242,11 +242,11 @@ extension UIColor {
 
 // MARK: Additional Functionality
 extension UIColor {
-    
+
     func isLightColor() -> Bool {
         var white = CGFloat(0)
         self.getWhite(&white, alpha: nil)
         return (white >= 0.5)
     }
-    
+
 }
