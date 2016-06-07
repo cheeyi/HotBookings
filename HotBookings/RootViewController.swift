@@ -16,6 +16,7 @@ class RootViewController: UIViewController {
     // MARK: - Properties
 
     let viewModel = RootViewModel()
+    var selectedAnnotationView: MKAnnotationView?
 
     // MARK: - Subviews
 
@@ -50,8 +51,13 @@ class RootViewController: UIViewController {
     }
 
     func pushDetails(regionID: String) {
-        let viewController = HotelListViewController(hotels: viewModel.hotels, regionName: "Region Name")
-        navigationController?.pushViewController(viewController, animated: true)
+        guard let regions = viewModel.regionDatas else { return }
+        regions.forEach { (region) in
+            if region.regionID == regionID {
+                let viewController = HotelListViewController(hotels: region.hotels, regionName: region.name)
+                navigationController?.pushViewController(viewController, animated: true)
+            }
+        }
     }
 
     // MARK: - Private Helpers
@@ -113,7 +119,25 @@ class RootViewController: UIViewController {
 extension RootViewController: MKMapViewDelegate {
 
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
-        pushDetails("")
+        selectedAnnotationView = view
+    }
+
+    func mapView(mapView: MKMapView, didDeselectAnnotationView view: MKAnnotationView) {
+        selectedAnnotationView = nil
+    }
+
+    func showRegionDetails() {
+        guard let coordinates = selectedAnnotationView?.annotation?.coordinate else { return }
+        let coordinateTuple = (coordinates.longitude, coordinates.latitude) // Because RootViewModel.regions is (long,lat) format
+        var currentIndex = 0
+        var regionID = ""
+        for region in RootViewModel.regions {
+            if Double(region.0) == coordinateTuple.0 && Double(region.1) == coordinateTuple.1 {
+                regionID = String(RootViewModel.regionIDs[currentIndex])
+            }
+            currentIndex += 1
+        }
+        pushDetails(regionID)
     }
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -126,6 +150,11 @@ extension RootViewController: MKMapViewDelegate {
             annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "mapAnnotationPinIdentifier")
             annotationView.pinTintColor = UIColor.greenerPasturesColor()
         }
+        let detailsButton = UIButton(type: .DetailDisclosure)
+        detailsButton.tintColor = UIColor.firstClassBlueColor()
+        detailsButton.addTarget(self, action: #selector(self.showRegionDetails), forControlEvents: .TouchUpInside)
+        annotationView.rightCalloutAccessoryView = detailsButton
+        annotationView.canShowCallout = true
         return annotationView
     }
 
@@ -138,6 +167,7 @@ extension RootViewController: MKMapViewDelegate {
         for location in locations {
             let annotation = MKPointAnnotation()
             annotation.coordinate = location.coordinate
+            annotation.title = "Region Title"
             mapView.addAnnotation(annotation)
         }
     }
