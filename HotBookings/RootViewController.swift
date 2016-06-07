@@ -50,6 +50,17 @@ class RootViewController: UIViewController {
         super.viewDidAppear(animated)
     }
 
+    // MARK: Navigation
+
+    func pushDetails(regionID: String) {
+
+        var hotels = [Hotel]()
+        let hotel = Hotel(regionID: "", hotelID: "", lat: 0, long: 0, viewCount: 10, bookCount: 20, name: "Hotel Name")
+        hotels.append(hotel)
+        let viewController = HotelListViewController(hotels: hotels)
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+
     // MARK: - Private Helpers
 
     private func setupViewHierarchy() {
@@ -107,6 +118,10 @@ class RootViewController: UIViewController {
 }
 
 extension RootViewController: MKMapViewDelegate {
+
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        pushDetails("")
+    }
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         let annotationView: MKPinAnnotationView

@@ -9,6 +9,7 @@
 import Foundation
 
 struct Hotel {
+    let regionID: String
     let hotelID: String
     let lat: Double
     let long: Double

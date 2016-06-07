@@ -1,434 +1,1107 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0292BF331D05FFE00095C6C5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0292BF321D05FFE00095C6C5 /* LocationManager.swift */; };
-		3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */; };
-		3CCF78331D05CF3E00CD94B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */; };
-		3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */; };
-		3CCF78431D05D03D00CD94B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */; };
-		3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */; };
-		3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */; };
-		3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */; };
-		3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */; };
-		3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */; };
-		3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */; };
-		3CCF78661D05F76C00CD94B3 /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78651D05F76C00CD94B3 /* LFHeatMap.m */; };
-		3CCF78691D0613F200CD94B3 /* NSValue+MKMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78681D0613F200CD94B3 /* NSValue+MKMapPoint.m */; };
-		841A30E41D0619E20060140B /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A30E31D0619E20060140B /* Hotel.swift */; };
-		847CCC681D06111A0013C3F4 /* HotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CCC671D06111A0013C3F4 /* HotRequest.swift */; };
-		B2FFA70E8DD6D3A09A1AABD6 /* Pods_HotBookings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXFileReference section */
-		0292BF321D05FFE00095C6C5 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		3CCF782D1D05CF3E00CD94B3 /* HotBookings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotBookings.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3CCF783C1D05CF3E00CD94B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainExtensions.swift; sourceTree = "<group>"; };
-		3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
-		3CCF784F1D05D5AB00CD94B3 /* HotBookings-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HotBookings-Bridging-Header.h"; sourceTree = "<group>"; };
-		3CCF78511D05D63E00CD94B3 /* CompactConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompactConstraint.h; sourceTree = "<group>"; };
-		3CCF78521D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+CompactConstraint.h"; sourceTree = "<group>"; };
-		3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+CompactConstraint.m"; sourceTree = "<group>"; };
-		3CCF78541D05D63E00CD94B3 /* UIView+CompactConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CompactConstraint.h"; sourceTree = "<group>"; };
-		3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CompactConstraint.m"; sourceTree = "<group>"; };
-		3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
-		3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultilineNavigationBarTitleView.swift; sourceTree = "<group>"; };
-		3CCF785F1D05F6F100CD94B3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/HotBookings-cuqfmwmrriglpecjzntbrixgwofh/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
-		3CCF78601D05F6F100CD94B3 /* LFHeatMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LFHeatMap.framework; path = "../../../Library/Developer/Xcode/DerivedData/HotBookings-cuqfmwmrriglpecjzntbrixgwofh/Build/Products/Debug-iphonesimulator/LFHeatMap/LFHeatMap.framework"; sourceTree = "<group>"; };
-		3CCF78641D05F76C00CD94B3 /* LFHeatMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFHeatMap.h; sourceTree = "<group>"; };
-		3CCF78651D05F76C00CD94B3 /* LFHeatMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFHeatMap.m; sourceTree = "<group>"; };
-		3CCF78671D0613F200CD94B3 /* NSValue+MKMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValue+MKMapPoint.h"; sourceTree = "<group>"; };
-		3CCF78681D0613F200CD94B3 /* NSValue+MKMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+MKMapPoint.m"; sourceTree = "<group>"; };
-		68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.debug.xcconfig"; sourceTree = "<group>"; };
-		784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.release.xcconfig"; sourceTree = "<group>"; };
-		841A30E31D0619E20060140B /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
-		847CCC671D06111A0013C3F4 /* HotRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotRequest.swift; sourceTree = "<group>"; };
-		F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotBookings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		3CCF782A1D05CF3E00CD94B3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B2FFA70E8DD6D3A09A1AABD6 /* Pods_HotBookings.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		3CCF78241D05CF3E00CD94B3 = {
-			isa = PBXGroup;
-			children = (
-				3CCF782F1D05CF3E00CD94B3 /* HotBookings */,
-				3CCF782E1D05CF3E00CD94B3 /* Products */,
-				6BEEB28250F0FD3722CCBDE5 /* Pods */,
-				B4CCDAC3E64C4AECAD5E9E0A /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		3CCF782E1D05CF3E00CD94B3 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3CCF782D1D05CF3E00CD94B3 /* HotBookings.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3CCF782F1D05CF3E00CD94B3 /* HotBookings */ = {
-			isa = PBXGroup;
-			children = (
-				3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */,
-				3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */,
-				3CCF78581D05D95A00CD94B3 /* RootViewModel.swift */,
-				3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */,
-				3CCF784F1D05D5AB00CD94B3 /* HotBookings-Bridging-Header.h */,
-				3CCF78421D05D03D00CD94B3 /* LaunchScreen.storyboard */,
-				3CCF783C1D05CF3E00CD94B3 /* Info.plist */,
-				3CCF78501D05D63E00CD94B3 /* CompactConstraint */,
-				3CCF78451D05D2B500CD94B3 /* Extensions */,
-				3CCF78631D05F76C00CD94B3 /* LFHeatMap */,
-				0292BF321D05FFE00095C6C5 /* LocationManager.swift */,
-				847CCC671D06111A0013C3F4 /* HotRequest.swift */,
-				841A30E31D0619E20060140B /* Hotel.swift */,
-			);
-			path = HotBookings;
-			sourceTree = "<group>";
-		};
-		3CCF78451D05D2B500CD94B3 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3CCF78461D05D2D100CD94B3 /* MainExtensions.swift */,
-				3CCF785D1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift */,
-				3CCF784D1D05D42200CD94B3 /* UIColorExtensions.swift */,
-				3CCF78671D0613F200CD94B3 /* NSValue+MKMapPoint.h */,
-				3CCF78681D0613F200CD94B3 /* NSValue+MKMapPoint.m */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		3CCF78501D05D63E00CD94B3 /* CompactConstraint */ = {
-			isa = PBXGroup;
-			children = (
-				3CCF78511D05D63E00CD94B3 /* CompactConstraint.h */,
-				3CCF78521D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.h */,
-				3CCF78531D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m */,
-				3CCF78541D05D63E00CD94B3 /* UIView+CompactConstraint.h */,
-				3CCF78551D05D63E00CD94B3 /* UIView+CompactConstraint.m */,
-			);
-			path = CompactConstraint;
-			sourceTree = "<group>";
-		};
-		3CCF78631D05F76C00CD94B3 /* LFHeatMap */ = {
-			isa = PBXGroup;
-			children = (
-				3CCF78641D05F76C00CD94B3 /* LFHeatMap.h */,
-				3CCF78651D05F76C00CD94B3 /* LFHeatMap.m */,
-			);
-			path = LFHeatMap;
-			sourceTree = "<group>";
-		};
-		6BEEB28250F0FD3722CCBDE5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */,
-				784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		B4CCDAC3E64C4AECAD5E9E0A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3CCF785F1D05F6F100CD94B3 /* Alamofire.framework */,
-				3CCF78601D05F6F100CD94B3 /* LFHeatMap.framework */,
-				F483C0AD01123F9DB87F258A /* Pods_HotBookings.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		3CCF782C1D05CF3E00CD94B3 /* HotBookings */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3CCF783F1D05CF3E00CD94B3 /* Build configuration list for PBXNativeTarget "HotBookings" */;
-			buildPhases = (
-				E7DCDC623395B8D4479F02E2 /* [CP] Check Pods Manifest.lock */,
-				3CCF78291D05CF3E00CD94B3 /* Sources */,
-				3CCF782A1D05CF3E00CD94B3 /* Frameworks */,
-				3CCF782B1D05CF3E00CD94B3 /* Resources */,
-				9E1334828AB87DED264A0BA7 /* [CP] Embed Pods Frameworks */,
-				6BEE86659F6B0041445983D8 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HotBookings;
-			productName = HotBookings;
-			productReference = 3CCF782D1D05CF3E00CD94B3 /* HotBookings.app */;
-			productType = "com.apple.product-type.application";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		3CCF78251D05CF3E00CD94B3 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "Expedia Inc.";
-				TargetAttributes = {
-					3CCF782C1D05CF3E00CD94B3 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
-				};
-			};
-			buildConfigurationList = 3CCF78281D05CF3E00CD94B3 /* Build configuration list for PBXProject "HotBookings" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 3CCF78241D05CF3E00CD94B3;
-			productRefGroup = 3CCF782E1D05CF3E00CD94B3 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				3CCF782C1D05CF3E00CD94B3 /* HotBookings */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		3CCF782B1D05CF3E00CD94B3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */,
-				3CCF78431D05D03D00CD94B3 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6BEE86659F6B0041445983D8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9E1334828AB87DED264A0BA7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E7DCDC623395B8D4479F02E2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		3CCF78291D05CF3E00CD94B3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3CCF78331D05CF3E00CD94B3 /* RootViewController.swift in Sources */,
-				3CCF78691D0613F200CD94B3 /* NSValue+MKMapPoint.m in Sources */,
-				3CCF78591D05D95A00CD94B3 /* RootViewModel.swift in Sources */,
-				0292BF331D05FFE00095C6C5 /* LocationManager.swift in Sources */,
-				3CCF78471D05D2D100CD94B3 /* MainExtensions.swift in Sources */,
-				847CCC681D06111A0013C3F4 /* HotRequest.swift in Sources */,
-				3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */,
-				3CCF78661D05F76C00CD94B3 /* LFHeatMap.m in Sources */,
-				3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */,
-				3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */,
-				3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */,
-				3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */,
-				841A30E41D0619E20060140B /* Hotel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin XCBuildConfiguration section */
-		3CCF783D1D05CF3E00CD94B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
-		3CCF783E1D05CF3E00CD94B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		3CCF78401D05CF3E00CD94B3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HotBookings/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.expedia.HotBookings;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "HotBookings/HotBookings-Bridging-Header.h";
-			};
-			name = Debug;
-		};
-		3CCF78411D05CF3E00CD94B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = HotBookings/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.expedia.HotBookings;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "HotBookings/HotBookings-Bridging-Header.h";
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		3CCF78281D05CF3E00CD94B3 /* Build configuration list for PBXProject "HotBookings" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CCF783D1D05CF3E00CD94B3 /* Debug */,
-				3CCF783E1D05CF3E00CD94B3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3CCF783F1D05CF3E00CD94B3 /* Build configuration list for PBXNativeTarget "HotBookings" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3CCF78401D05CF3E00CD94B3 /* Debug */,
-				3CCF78411D05CF3E00CD94B3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 3CCF78251D05CF3E00CD94B3 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>0292BF321D05FFE00095C6C5</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>LocationManager.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0292BF331D05FFE00095C6C5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0292BF321D05FFE00095C6C5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF78241D05CF3E00CD94B3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3CCF782F1D05CF3E00CD94B3</string>
+				<string>3CCF782E1D05CF3E00CD94B3</string>
+				<string>6BEEB28250F0FD3722CCBDE5</string>
+				<string>B4CCDAC3E64C4AECAD5E9E0A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78251D05CF3E00CD94B3</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Expedia Inc.</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>3CCF782C1D05CF3E00CD94B3</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3.1</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>3CCF78281D05CF3E00CD94B3</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>3CCF78241D05CF3E00CD94B3</string>
+			<key>productRefGroup</key>
+			<string>3CCF782E1D05CF3E00CD94B3</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>3CCF782C1D05CF3E00CD94B3</string>
+			</array>
+		</dict>
+		<key>3CCF78281D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>3CCF783D1D05CF3E00CD94B3</string>
+				<string>3CCF783E1D05CF3E00CD94B3</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3CCF78291D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3CCF78331D05CF3E00CD94B3</string>
+				<string>3CCF78691D0613F200CD94B3</string>
+				<string>3CCF78591D05D95A00CD94B3</string>
+				<string>0292BF331D05FFE00095C6C5</string>
+				<string>3CCF78471D05D2D100CD94B3</string>
+				<string>B20431791D06DB1300C5EA21</string>
+				<string>847CCC681D06111A0013C3F4</string>
+				<string>3CCF78561D05D63E00CD94B3</string>
+				<string>3CCF78661D05F76C00CD94B3</string>
+				<string>3CCF78571D05D63E00CD94B3</string>
+				<string>3CCF785E1D05E0B700CD94B3</string>
+				<string>3CCF78311D05CF3E00CD94B3</string>
+				<string>3CCF784E1D05D42200CD94B3</string>
+				<string>841A30E41D0619E20060140B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3CCF782A1D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B2FFA70E8DD6D3A09A1AABD6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3CCF782B1D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3CCF78381D05CF3E00CD94B3</string>
+				<string>3CCF78431D05D03D00CD94B3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3CCF782C1D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>3CCF783F1D05CF3E00CD94B3</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E7DCDC623395B8D4479F02E2</string>
+				<string>3CCF78291D05CF3E00CD94B3</string>
+				<string>3CCF782A1D05CF3E00CD94B3</string>
+				<string>3CCF782B1D05CF3E00CD94B3</string>
+				<string>9E1334828AB87DED264A0BA7</string>
+				<string>6BEE86659F6B0041445983D8</string>
+				<string>CEC8E343542501ACFB91804C</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>HotBookings</string>
+			<key>productName</key>
+			<string>HotBookings</string>
+			<key>productReference</key>
+			<string>3CCF782D1D05CF3E00CD94B3</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>3CCF782D1D05CF3E00CD94B3</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>HotBookings.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>3CCF782E1D05CF3E00CD94B3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3CCF782D1D05CF3E00CD94B3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF782F1D05CF3E00CD94B3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3CCF78301D05CF3E00CD94B3</string>
+				<string>3CCF78321D05CF3E00CD94B3</string>
+				<string>3CCF78581D05D95A00CD94B3</string>
+				<string>3CCF78371D05CF3E00CD94B3</string>
+				<string>3CCF784F1D05D5AB00CD94B3</string>
+				<string>3CCF78421D05D03D00CD94B3</string>
+				<string>3CCF783C1D05CF3E00CD94B3</string>
+				<string>3CCF78501D05D63E00CD94B3</string>
+				<string>3CCF78451D05D2B500CD94B3</string>
+				<string>3CCF78631D05F76C00CD94B3</string>
+				<string>0292BF321D05FFE00095C6C5</string>
+				<string>847CCC671D06111A0013C3F4</string>
+				<string>841A30E31D0619E20060140B</string>
+				<string>B20431781D06DB1300C5EA21</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>HotBookings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78301D05CF3E00CD94B3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>AppDelegate.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78311D05CF3E00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78301D05CF3E00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF78321D05CF3E00CD94B3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RootViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78331D05CF3E00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78321D05CF3E00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF78371D05CF3E00CD94B3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78381D05CF3E00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78371D05CF3E00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF783C1D05CF3E00CD94B3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF783D1D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>3CCF783E1D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>9.3</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>3CCF783F1D05CF3E00CD94B3</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>3CCF78401D05CF3E00CD94B3</string>
+				<string>3CCF78411D05CF3E00CD94B3</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3CCF78401D05CF3E00CD94B3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>68C1BA9089081124F2E6DDE4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>HotBookings/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.expedia.HotBookings</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>HotBookings/HotBookings-Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>3CCF78411D05CF3E00CD94B3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>784A359B459E1DA98DFDF0C7</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>HotBookings/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.expedia.HotBookings</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
+				<string>HotBookings/HotBookings-Bridging-Header.h</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>3CCF78421D05D03D00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>path</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78431D05D03D00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78421D05D03D00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF78451D05D2B500CD94B3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3CCF78461D05D2D100CD94B3</string>
+				<string>3CCF785D1D05E0B700CD94B3</string>
+				<string>3CCF784D1D05D42200CD94B3</string>
+				<string>3CCF78671D0613F200CD94B3</string>
+				<string>3CCF78681D0613F200CD94B3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Extensions</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78461D05D2D100CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MainExtensions.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78471D05D2D100CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78461D05D2D100CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF784D1D05D42200CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>UIColorExtensions.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF784E1D05D42200CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF784D1D05D42200CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF784F1D05D5AB00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>HotBookings-Bridging-Header.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78501D05D63E00CD94B3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3CCF78511D05D63E00CD94B3</string>
+				<string>3CCF78521D05D63E00CD94B3</string>
+				<string>3CCF78531D05D63E00CD94B3</string>
+				<string>3CCF78541D05D63E00CD94B3</string>
+				<string>3CCF78551D05D63E00CD94B3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CompactConstraint</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78511D05D63E00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CompactConstraint.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78521D05D63E00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSLayoutConstraint+CompactConstraint.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78531D05D63E00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSLayoutConstraint+CompactConstraint.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78541D05D63E00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>UIView+CompactConstraint.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78551D05D63E00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>UIView+CompactConstraint.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78561D05D63E00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78531D05D63E00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF78571D05D63E00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78551D05D63E00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF78581D05D95A00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>RootViewModel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78591D05D95A00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78581D05D95A00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF785D1D05E0B700CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>MultilineNavigationBarTitleView.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF785E1D05E0B700CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF785D1D05E0B700CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF785F1D05F6F100CD94B3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Alamofire.framework</string>
+			<key>path</key>
+			<string>../../../Library/Developer/Xcode/DerivedData/HotBookings-cuqfmwmrriglpecjzntbrixgwofh/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78601D05F6F100CD94B3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>LFHeatMap.framework</string>
+			<key>path</key>
+			<string>../../../Library/Developer/Xcode/DerivedData/HotBookings-cuqfmwmrriglpecjzntbrixgwofh/Build/Products/Debug-iphonesimulator/LFHeatMap/LFHeatMap.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78631D05F76C00CD94B3</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3CCF78641D05F76C00CD94B3</string>
+				<string>3CCF78651D05F76C00CD94B3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>LFHeatMap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78641D05F76C00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LFHeatMap.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78651D05F76C00CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LFHeatMap.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78661D05F76C00CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78651D05F76C00CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3CCF78671D0613F200CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSValue+MKMapPoint.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78681D0613F200CD94B3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSValue+MKMapPoint.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3CCF78691D0613F200CD94B3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3CCF78681D0613F200CD94B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>68C1BA9089081124F2E6DDE4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-HotBookings.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6BEE86659F6B0041445983D8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>6BEEB28250F0FD3722CCBDE5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>68C1BA9089081124F2E6DDE4</string>
+				<string>784A359B459E1DA98DFDF0C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>784A359B459E1DA98DFDF0C7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-HotBookings.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>841A30E31D0619E20060140B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>Hotel.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>841A30E41D0619E20060140B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>841A30E31D0619E20060140B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>847CCC671D06111A0013C3F4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>HotRequest.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>847CCC681D06111A0013C3F4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>847CCC671D06111A0013C3F4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9E1334828AB87DED264A0BA7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B20431781D06DB1300C5EA21</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>HotelListViewController.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B20431791D06DB1300C5EA21</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B20431781D06DB1300C5EA21</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B2FFA70E8DD6D3A09A1AABD6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F483C0AD01123F9DB87F258A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B4CCDAC3E64C4AECAD5E9E0A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3CCF785F1D05F6F100CD94B3</string>
+				<string>3CCF78601D05F6F100CD94B3</string>
+				<string>F483C0AD01123F9DB87F258A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CEC8E343542501ACFB91804C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>E7DCDC623395B8D4479F02E2</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F483C0AD01123F9DB87F258A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_HotBookings.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>3CCF78251D05CF3E00CD94B3</string>
+</dict>
+</plist>
