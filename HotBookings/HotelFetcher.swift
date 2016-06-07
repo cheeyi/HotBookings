@@ -25,7 +25,7 @@ class HotelFetcher: NSObject {
         return NSURL(string: requestURL)!
     }
 
-    func startDownloadTask(completion:(CLLocationCoordinate2D?)->Void) {
+    func fetchHotelLocation(completion:(CLLocationCoordinate2D?)->Void) {
         let requestURL = makeRequestURL()
         let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
         let downloadTask = session.dataTaskWithURL(requestURL, completionHandler: {(data, response, error) in
