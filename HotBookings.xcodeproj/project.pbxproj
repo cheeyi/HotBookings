@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0292BF331D05FFE00095C6C5 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0292BF321D05FFE00095C6C5 /* LocationManager.swift */; };
+		0292BF3A1D0726C90095C6C5 /* HotelFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0292BF391D0726C80095C6C5 /* HotelFetcher.swift */; };
 		3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */; };
 		3CCF78331D05CF3E00CD94B3 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */; };
 		3CCF78381D05CF3E00CD94B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3CCF78371D05CF3E00CD94B3 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		0292BF321D05FFE00095C6C5 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		0292BF391D0726C80095C6C5 /* HotelFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelFetcher.swift; sourceTree = "<group>"; };
 		3CCF782D1D05CF3E00CD94B3 /* HotBookings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotBookings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CCF78301D05CF3E00CD94B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3CCF78321D05CF3E00CD94B3 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				3CCF78631D05F76C00CD94B3 /* LFHeatMap */,
 				0292BF321D05FFE00095C6C5 /* LocationManager.swift */,
 				847CCC671D06111A0013C3F4 /* HotRequest.swift */,
+				0292BF391D0726C80095C6C5 /* HotelFetcher.swift */,
 				841A30E31D0619E20060140B /* Hotel.swift */,
 				3CCF786A1D071ECA00CD94B3 /* HotelListViewController.swift */,
 				841A30E71D071F030060140B /* Region.swift */,
@@ -295,6 +298,7 @@
 				3CCF78561D05D63E00CD94B3 /* NSLayoutConstraint+CompactConstraint.m in Sources */,
 				3CCF78661D05F76C00CD94B3 /* LFHeatMap.m in Sources */,
 				3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */,
+				0292BF3A1D0726C90095C6C5 /* HotelFetcher.swift in Sources */,
 				3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */,
 				3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */,
 				841A30E81D071F030060140B /* Region.swift in Sources */,
