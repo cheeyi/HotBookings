@@ -13,7 +13,7 @@ import Alamofire
 class RootViewModel {
 
     // MARK: - Map data
-    private var request: Request?
+    private var requests: [Request]?
 
     var regionDatas: [Region]?
 
@@ -86,17 +86,24 @@ class RootViewModel {
 
     // Get real data from server
     func requestData() {
-        if request == nil {
-            request = HotRequest.fetchData { (result) in
+        if requests == nil {
+            requests = HotRequest.fetchData { (result) in
                 switch result {
                 case let Result.Failure(error):
                     print("Request failed: \(error)")
                 case let Result.Success(regionsArray):
-                    self.regionDatas = regionsArray
-                    self.updateHotelLocationsAndWeights()
+                    if var regionDatas = self.regionDatas {
+                        regionsArray.forEach({ (region) in
+                            regionDatas.append(region)
+                        })
+                        self.regionDatas = regionDatas
+                        self.updateHotelLocationsAndWeights()
+                    } else {
+                        self.regionDatas = regionsArray
+                        self.updateHotelLocationsAndWeights()
+                    }
                 }
-
-                self.request = nil
+                self.requests = nil
             }
         }
     }
