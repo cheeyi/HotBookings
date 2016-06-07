@@ -43,11 +43,11 @@ class RootViewModel {
     func heatMapPointValues() -> [NSObject: AnyObject] {
         var pointValues = [NSValue: CDouble]()
         var currentIndex = 0
-        let points = hotelLocations
+        let points = locations // TODO: Use hotelLocations
             .map({MKMapPointForCoordinate($0.coordinate)})
             .map({NSValue(MKMapPoint: $0)})
         for point in points {
-            pointValues[point] = heatMapWeights[currentIndex]
+            pointValues[point] = CDouble(arc4random_uniform(5) + 1)/10000 //heatMapWeights[currentIndex]
             currentIndex += 1
         }
         return pointValues
