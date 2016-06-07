@@ -53,7 +53,13 @@ class RootViewModel {
         return pointValues
     }
 
+    func parseHotelFromRegion() {
+        guard let regionDatas = regionDatas else { return }
+        hotels = regionDatas.reduce([Hotel]()) { return $0 + $1.hotels }
+    }
+
     func updateHotelLocationsAndWeights() {
+        parseHotelFromRegion()
         var newHotelLocations = [CLLocation]()
         var newHeatMapWeights = [CDouble]()
         hotels.forEach { (hotel) in
@@ -88,6 +94,7 @@ class RootViewModel {
                     print("Request failed: \(error)")
                 case let Result.Success(regionsArray):
                     self.regionDatas = regionsArray
+                    self.updateHotelLocationsAndWeights()
                 }
 
                 self.request = nil
