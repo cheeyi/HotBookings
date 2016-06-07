@@ -164,11 +164,13 @@ extension RootViewController: MKMapViewDelegate {
 
     /// Adds `MKPointAnnotations` for each `CLLocation` in the locations array
     private func addMapAnnotations(locations: [CLLocation]) {
+        var currentIndex = 0
         for location in locations {
             let annotation = MKPointAnnotation()
             annotation.coordinate = location.coordinate
-            annotation.title = "Region Title"
+            annotation.title = RootViewModel.regionNames[currentIndex]
             mapView.addAnnotation(annotation)
+            currentIndex += 1
         }
     }
 }
