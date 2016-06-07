@@ -22,6 +22,7 @@
 		3CCF78661D05F76C00CD94B3 /* LFHeatMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78651D05F76C00CD94B3 /* LFHeatMap.m */; };
 		3CCF78691D0613F200CD94B3 /* NSValue+MKMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF78681D0613F200CD94B3 /* NSValue+MKMapPoint.m */; };
 		3CCF786B1D071ECA00CD94B3 /* HotelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCF786A1D071ECA00CD94B3 /* HotelListViewController.swift */; };
+		73EDB7531D077D8800C7A25E /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EDB7521D077D8800C7A25E /* TitleView.swift */; };
 		841A30E41D0619E20060140B /* Hotel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A30E31D0619E20060140B /* Hotel.swift */; };
 		841A30E81D071F030060140B /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841A30E71D071F030060140B /* Region.swift */; };
 		847CCC681D06111A0013C3F4 /* HotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CCC671D06111A0013C3F4 /* HotRequest.swift */; };
@@ -55,6 +56,7 @@
 		3CCF78681D0613F200CD94B3 /* NSValue+MKMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValue+MKMapPoint.m"; sourceTree = "<group>"; };
 		3CCF786A1D071ECA00CD94B3 /* HotelListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HotelListViewController.swift; sourceTree = "<group>"; };
 		68C1BA9089081124F2E6DDE4 /* Pods-HotBookings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.debug.xcconfig"; sourceTree = "<group>"; };
+		73EDB7521D077D8800C7A25E /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		784A359B459E1DA98DFDF0C7 /* Pods-HotBookings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotBookings.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotBookings/Pods-HotBookings.release.xcconfig"; sourceTree = "<group>"; };
 		841A30E31D0619E20060140B /* Hotel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hotel.swift; sourceTree = "<group>"; };
 		841A30E71D071F030060140B /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				841A30E31D0619E20060140B /* Hotel.swift */,
 				3CCF786A1D071ECA00CD94B3 /* HotelListViewController.swift */,
 				841A30E71D071F030060140B /* Region.swift */,
+				73EDB7521D077D8800C7A25E /* TitleView.swift */,
 			);
 			path = HotBookings;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				3CCF78571D05D63E00CD94B3 /* UIView+CompactConstraint.m in Sources */,
 				0292BF3A1D0726C90095C6C5 /* HotelFetcher.swift in Sources */,
 				3CCF785E1D05E0B700CD94B3 /* MultilineNavigationBarTitleView.swift in Sources */,
+				73EDB7531D077D8800C7A25E /* TitleView.swift in Sources */,
 				3CCF78311D05CF3E00CD94B3 /* AppDelegate.swift in Sources */,
 				841A30E81D071F030060140B /* Region.swift in Sources */,
 				3CCF784E1D05D42200CD94B3 /* UIColorExtensions.swift in Sources */,

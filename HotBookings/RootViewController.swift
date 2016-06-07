@@ -33,6 +33,9 @@ class RootViewController: UIViewController {
     let mapView = MKMapView().withAutoLayout()
     var heatmapOverlay = DTMHeatmap()
 
+    var TitleBarView: TitleView?
+
+
     // MARK: - View Controller lifecycle
 
     override func viewDidLoad() {
@@ -64,10 +67,14 @@ class RootViewController: UIViewController {
     // MARK: - Private Helpers
 
     private func setupViewHierarchy() {
+        TitleBarView = TitleView(frame: CGRectZero)
+        TitleBarView?.withAutoLayout()
         view.backgroundColor = UIColor.whiteColor()
-        navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        self.navigationController?.navigationBar.hidden = true
+        //navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
+        //navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         title = "Hot Bookings"
+        view.addSubview(TitleBarView!)
         view.addSubviews([searchForm, mapView])
     }
 
@@ -96,17 +103,19 @@ class RootViewController: UIViewController {
     private func setupConstraints() {
         let relationships = [
             "H:|-[searchForm]-|",
+            "H:|[customTitleView]|",
             "H:|[mapView]|",
-            "V:[topLayoutGuide]-[searchForm]-[mapView]-(verticalMargin)-|"
+            "V:|[customTitleView(TitleBarHeight)]-[searchForm]-[mapView]-(verticalMargin)-|"
         ]
 
         let views = [
+            "customTitleView": TitleBarView!,
             "searchForm": searchForm,
             "mapView": mapView,
-            "topLayoutGuide": topLayoutGuide
+            "topLayoutGuide": topLayoutGuide,
         ]
 
-        let metrics = ["verticalMargin": CGFloat(8)]
+        let metrics = ["verticalMargin": CGFloat(8), "TitleBarHeight": CGFloat(70) ]
 
         view.addCompactConstraints(relationships, metrics: metrics, views: views as [NSObject : AnyObject])
     }
