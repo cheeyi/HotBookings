@@ -7,10 +7,15 @@
 //
 
 import Foundation
+import Alamofire
 
-struct RootViewModel {
+
+class RootViewModel {
 
     // MARK: - Map data
+    private var request: Request?
+
+    var regionDatas: [Region]?
 
     /// A location that represents the default center of the map
     static let mapCenter = CLLocationCoordinate2D(latitude: 44.9778, longitude: -93.2650) // Minneapolis
@@ -70,5 +75,21 @@ struct RootViewModel {
             locationArray.append(CLLocation(latitude: latitute, longitude: longitude))
         }
         return locationArray
+    }
+
+    // Get real data from server
+    func requestData() {
+        if request == nil {
+            request = HotRequest.fetchData { (result) in
+                switch result {
+                case let Result.Failure(error):
+                    print("Request failed: \(error)")
+                case let Result.Success(regionsArray):
+                    self.regionDatas = regionsArray
+                }
+
+                self.request = nil
+            }
+        }
     }
 }
