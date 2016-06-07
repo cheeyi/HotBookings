@@ -21,7 +21,7 @@ class RootViewModel {
     static let mapCenter = CLLocationCoordinate2D(latitude: 44.9778, longitude: -93.2650) // Minneapolis
 
     /// Span of the map
-    let span = MKCoordinateSpanMake(25.0, 40.0)
+    let span = MKCoordinateSpanMake(40.0, 50.0)
 
     /// An array of regions that will be drawn as pins on the map
     var locations = RootViewModel.mapAnnotationRegions()
