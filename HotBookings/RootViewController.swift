@@ -15,7 +15,7 @@ class RootViewController: UIViewController {
 
     // MARK: - Properties
 
-    var viewModel = RootViewModel()
+    let viewModel = RootViewModel()
 
     // MARK: - Subviews
 

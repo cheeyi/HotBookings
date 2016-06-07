@@ -29,7 +29,7 @@ class RootViewModel {
     /// An array of hotel locations that are used as data source for the heat map
     // TODO: Hardcoded to map center for now. Look for hotel object
     // TODO: Use real hotel data from API
-    var hotels = [Hotel(regionID: "", hotelID: "", lat: 44.9778, long: -93.2650, viewCount: 10, bookCount: 20, name: "Hotel Name")]
+    var hotels = [Hotel(hotelID: "", lat: 44.9778, long: -93.2650, viewCount: 10, bookCount: 20, name: "Hotel Name")]
     var hotelLocations = [CLLocation(latitude: RootViewModel.mapCenter.latitude, longitude: RootViewModel.mapCenter.longitude)]
     var heatMapWeights = [CDouble(1)] // TODO: [CDouble]()
 
@@ -53,12 +53,14 @@ class RootViewModel {
         return pointValues
     }
 
-    mutating func updateHotelLocationsAndWeights() {
+    func updateHotelLocationsAndWeights() {
         var newHotelLocations = [CLLocation]()
         var newHeatMapWeights = [CDouble]()
         hotels.forEach { (hotel) in
-            newHotelLocations.append(CLLocation(latitude: hotel.lat, longitude: hotel.long))
-            newHeatMapWeights.append(CDouble(hotel.bookCount))
+            if let latitude = hotel.lat, longitude = hotel.long, bookCount = hotel.bookCount {
+                newHotelLocations.append(CLLocation(latitude: latitude, longitude: longitude))
+                newHeatMapWeights.append(CDouble(bookCount))
+            }
         }
         hotelLocations = newHotelLocations
         heatMapWeights = newHeatMapWeights
