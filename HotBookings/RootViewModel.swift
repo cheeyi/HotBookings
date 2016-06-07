@@ -30,7 +30,7 @@ class RootViewModel {
     // TODO: Hardcoded to map center for now. Look for hotel object
     // TODO: Use real hotel data from API
     var hotels = [Hotel(hotelID: "", lat: 44.9778, long: -93.2650, viewCount: 10, bookCount: 20, name: "Hotel Name")]
-    var hotelLocations = [CLLocation(latitude: RootViewModel.mapCenter.latitude, longitude: RootViewModel.mapCenter.longitude)]
+    var hotelLocations: [CLLocation] = []
     var heatMapWeights = [CDouble(1)] // TODO: [CDouble]()
 
     /// Visible region of the map
@@ -40,7 +40,7 @@ class RootViewModel {
 
     // MARK: - Business logic of VC
 
-    func heatMapPointValues() -> [NSObject: AnyObject] {
+    func heatMapPointValues(locations:[CLLocation]) -> [NSObject: AnyObject] {
         var pointValues = [NSValue: CDouble]()
         var currentIndex = 0
         let points = locations // TODO: Use hotelLocations
@@ -58,18 +58,36 @@ class RootViewModel {
         hotels = regionDatas.reduce([Hotel]()) { return $0 + $1.hotels }
     }
 
-    func updateHotelLocationsAndWeights() {
+    func updateHotelWeights() {
         parseHotelFromRegion()
-        var newHotelLocations = [CLLocation]()
         var newHeatMapWeights = [CDouble]()
         hotels.forEach { (hotel) in
-            if let latitude = hotel.lat, longitude = hotel.long, bookCount = hotel.bookCount {
-                newHotelLocations.append(CLLocation(latitude: latitude, longitude: longitude))
+            if let bookCount = hotel.bookCount {
                 newHeatMapWeights.append(CDouble(bookCount))
             }
         }
-        hotelLocations = newHotelLocations
         heatMapWeights = newHeatMapWeights
+    }
+
+    func updateHotelLocations() {
+        parseHotelFromRegion()
+        var newHotelLocations = [CLLocation]()
+        var index = 0
+        let hotelCount = hotels.count
+        hotels.forEach { (hotel) in
+                let fetcher = HotelFetcher(hotelID: hotel.hotelID)
+                fetcher.fetchHotelLocation { (coordinate: CLLocationCoordinate2D?) in
+                    index+=1
+                    guard let coord = coordinate else {
+                        return
+                    }
+                    newHotelLocations.append(CLLocation(latitude: coord.latitude, longitude: coord.longitude))
+                    if index == hotelCount - 1 {
+                        self.hotelLocations = newHotelLocations
+                        NSNotificationCenter.defaultCenter().postNotificationName("updateHeatMap", object: nil)
+                    }
+                }
+        }
     }
 
     // MARK: - Private helpers
@@ -97,11 +115,12 @@ class RootViewModel {
                             regionDatas.append(region)
                         })
                         self.regionDatas = regionDatas
-                        self.updateHotelLocationsAndWeights()
                     } else {
                         self.regionDatas = regionsArray
-                        self.updateHotelLocationsAndWeights()
                     }
+
+                    self.updateHotelWeights()
+                    self.updateHotelLocations()
                 }
                 self.requests = nil
             }

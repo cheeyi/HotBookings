@@ -31,7 +31,7 @@ class RootViewController: UIViewController {
     }()
 
     let mapView = MKMapView().withAutoLayout()
-    let heatmapOverlay = DTMHeatmap()
+    var heatmapOverlay = DTMHeatmap()
 
     // MARK: - View Controller lifecycle
 
@@ -42,11 +42,12 @@ class RootViewController: UIViewController {
         setupConstraints()
         determineCity()
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(RootViewController.updateHeatMap), name: "updateHeatMap", object: nil)
+
         viewModel.requestData()
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
+    @objc private func updateHeatMap() {
         drawHeatMap()
     }
 
@@ -71,8 +72,17 @@ class RootViewController: UIViewController {
     }
 
     private func drawHeatMap() {
-        viewModel.updateHotelLocationsAndWeights()
-        heatmapOverlay.setData(viewModel.heatMapPointValues())
+        if viewModel.hotelLocations.count > 0 {
+            if self.mapView.overlays.count > 0 {
+                self.mapView.removeOverlay(self.heatmapOverlay)
+            }
+            self.heatmapOverlay = DTMHeatmap()
+            self.heatmapOverlay.setData(self.viewModel.heatMapPointValues(viewModel.hotelLocations))
+            self.mapView.addOverlay(self.heatmapOverlay)
+
+        } else {
+            fatalError()
+        }
     }
 
     private func setupMapView() {
@@ -86,7 +96,7 @@ class RootViewController: UIViewController {
     private func setupConstraints() {
         let relationships = [
             "H:|-[searchForm]-|",
-            "H:|-[mapView]-|",
+            "H:|[mapView]|",
             "V:[topLayoutGuide]-[searchForm]-[mapView]-(verticalMargin)-|"
         ]
 
