@@ -47,7 +47,7 @@ class RootViewModel {
             .map({MKMapPointForCoordinate($0.coordinate)})
             .map({NSValue(MKMapPoint: $0)})
         for point in points {
-            pointValues[point] = CDouble(arc4random_uniform(5) + 1)/10000 //heatMapWeights[currentIndex]
+            pointValues[point] = heatMapWeights[currentIndex] //CDouble(arc4random_uniform(5) + 1)/10000
             currentIndex += 1
         }
         return pointValues
@@ -61,9 +61,10 @@ class RootViewModel {
     func updateHotelWeights() {
         parseHotelFromRegion()
         var newHeatMapWeights = [CDouble]()
+        let maxBookCount = hotels.reduce(0, combine: { max($0, $1.bookCount!)})
         hotels.forEach { (hotel) in
             if let bookCount = hotel.bookCount {
-                newHeatMapWeights.append(CDouble(bookCount))
+                newHeatMapWeights.append(CDouble(bookCount)/CDouble(maxBookCount))
             }
         }
         heatMapWeights = newHeatMapWeights
