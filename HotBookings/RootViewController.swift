@@ -55,7 +55,7 @@ class RootViewController: UIViewController {
         var hotels = [Hotel]()
         let hotel = Hotel(regionID: "", hotelID: "", lat: 0, long: 0, viewCount: 10, bookCount: 20, name: "Hotel Name")
         hotels.append(hotel)
-        let viewController = HotelListViewController(hotels: hotels)
+        let viewController = HotelListViewController(hotels: hotels, regionName: "Example Region")
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 
