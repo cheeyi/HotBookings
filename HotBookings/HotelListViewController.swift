@@ -105,7 +105,7 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
 
         let viewsString = hotel.bookCount == 1 ? "view" : "views"
         let bookString = hotel.bookCount == 1 ? "booking" : "bookings"
-        detailTextLabel.text = "\(hotel.viewCount) \(viewsString), \(hotel.bookCount) \(bookString)"
+        detailTextLabel.text = "\(hotel.viewCount ?? 0) \(viewsString), \(hotel.bookCount ?? 0) \(bookString)"
 
 
     }
