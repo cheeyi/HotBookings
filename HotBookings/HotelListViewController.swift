@@ -76,6 +76,18 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdent)
         if cell == nil {
             cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellIdent)
+            let button = UIButton(type: .Custom)
+            button.titleLabel?.font = UIFont.systemFontOfSize(12.0)
+            button.setTitle("Book Now", forState: .Normal)
+            button.setTitleColor(UIColor.jetBlueGrayColor(), forState: .Normal)
+            button.layer.borderColor = UIColor.jetBlueGrayColor().CGColor
+            button.layer.borderWidth = 1.0
+            button.layer.cornerRadius = 5.0
+            button.sizeToFit()
+            let frame = button.frame
+            button.frame = CGRectMake(frame.origin.x, frame.origin.y, frame.width+10, frame.height)
+            button.addTarget(self, action: #selector(tapped(_:)), forControlEvents: .TouchUpInside)
+            cell?.accessoryView = button
         }
         return cell!
     }
@@ -83,10 +95,12 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
 
         let hotel = hotels[indexPath.row]
-        guard let titleLabel = cell.textLabel, detailTextLabel = cell.detailTextLabel else {
+        guard let titleLabel = cell.textLabel, detailTextLabel = cell.detailTextLabel, button = cell.accessoryView as? UIButton else {
             print("cant get subviews from cell")
             return
         }
+
+        button.tag = indexPath.row
 
         titleLabel.text = hotel.name
 
@@ -98,5 +112,12 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
 
     // MARK: Implementation
+    func tapped(button: UIButton) {
+        let hotel = self.hotels[button.tag]
+        guard let url = NSURL(string: "expda://hotelSearch?hotelId=\(hotel.hotelID)") else {
+            fatalError("can't build URL")
+        }
+        UIApplication.sharedApplication().openURL(url)
+    }
 
 }
