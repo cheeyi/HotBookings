@@ -43,6 +43,7 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
         navigationController?.navigationBar.translucent = false
 
