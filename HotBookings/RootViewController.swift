@@ -10,6 +10,73 @@ import UIKit
 import DTMHeatmap
 import CoreLocation
 
+class InsetTextField : UITextField {
+    var margin : CGFloat = 10.0
+
+    override func textRectForBounds(bounds: CGRect) -> CGRect {
+        return CGRectInset(bounds, margin, margin);
+    }
+
+    override func editingRectForBounds(bounds: CGRect) -> CGRect {
+        return CGRectInset(bounds, margin, margin);
+    }
+}
+
+class SearchFormView: UIView {
+    var textField: InsetTextField = InsetTextField().withAutoLayout()
+
+    override init (frame: CGRect) {
+        super.init(frame : frame)
+
+        setupViews()
+    }
+
+    convenience init () {
+        self.init(frame:CGRect.zero)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    private func setupViews() {
+
+        // Blur Effect
+        let blurEffect = UIBlurEffect(style: .Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect).withAutoLayout()
+        self.addSubview(blurEffectView)
+
+        textField.textColor = UIColor(white: 0.2, alpha: 0.7)
+        textField.font = UIFont.boldSystemFontOfSize(18.0)
+
+        // Add the vibrancy view to the blur view
+        blurEffectView.contentView.addSubview(textField) //vibrancyEffectView)
+
+        let r1 = [
+            "H:|[textField]|",
+            "V:|[textField]|",
+            ]
+
+        let v1 = [
+            "textField": textField,
+            ]
+
+        self.addCompactConstraints(r1, metrics: nil, views: v1 as [NSObject : AnyObject])
+
+        // Constraints
+        let r2 = [
+            "H:|[blurView]|",
+            "V:|[blurView]|",
+            ]
+
+        let v2 = [
+            "blurView": blurEffectView,
+            ]
+
+        self.addCompactConstraints(r2, metrics: nil, views: v2 as [NSObject : AnyObject])
+    }
+}
+
 
 class RootViewController: UIViewController {
 
@@ -20,14 +87,9 @@ class RootViewController: UIViewController {
 
     // MARK: - Subviews
 
-    let searchForm: UITextField = {
-        let textField = UITextField().withAutoLayout()
-        textField.backgroundColor = UIColor.jetBlueLightestGrayColor()
-        textField.tintColor = UIColor.jetBlueColor()
-        textField.textColor = UIColor.jetBlueColor()
-        textField.autocorrectionType = .No
-        textField.clearButtonMode = .WhileEditing
-        return textField
+    let searchFormView: SearchFormView = {
+        let searchFormView = SearchFormView().withAutoLayout()
+        return searchFormView
     }()
 
     let mapView = MKMapView().withAutoLayout()
@@ -56,19 +118,32 @@ class RootViewController: UIViewController {
         regions.forEach { (region) in
             if region.regionID == regionID {
                 let viewController = HotelListViewController(hotels: region.hotels, regionName: region.name)
-                navigationController?.pushViewController(viewController, animated: true)
+
+                viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel,
+                    target: self,
+                    action: #selector(RootViewController.dismissDetailsVC))
+
+                let nc = UINavigationController.init(rootViewController: viewController)
+                nc.modalPresentationStyle = .OverCurrentContext
+                self.presentViewController(nc, animated: true, completion: nil)
             }
         }
     }
 
     // MARK: - Private Helpers
 
+    func dismissDetailsVC() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     private func setupViewHierarchy() {
         view.backgroundColor = UIColor.whiteColor()
         navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
+        navigationController?.navigationBar.translucent = false
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         title = "Hot Bookings"
-        view.addSubviews([searchForm, mapView])
+        view.addSubview(mapView)
+        view.addSubview(searchFormView)
     }
 
     private func drawHeatMap() {
@@ -95,13 +170,14 @@ class RootViewController: UIViewController {
 
     private func setupConstraints() {
         let relationships = [
-            "H:|-[searchForm]-|",
+            "H:|[searchFormView]|",
             "H:|[mapView]|",
-            "V:[topLayoutGuide]-[searchForm]-[mapView]-(verticalMargin)-|"
+            "V:[topLayoutGuide][searchFormView]",
+            "V:[topLayoutGuide][mapView]|"
         ]
 
         let views = [
-            "searchForm": searchForm,
+            "searchFormView": searchFormView,
             "mapView": mapView,
             "topLayoutGuide": topLayoutGuide
         ]
@@ -120,7 +196,7 @@ class RootViewController: UIViewController {
             UIApplication.sharedApplication().networkActivityIndicatorVisible = true
             LocationManager.sharedLocationManager.startUpdatingLocation({
                 UIApplication.sharedApplication().networkActivityIndicatorVisible = false
-                self.searchForm.text = LocationManager.sharedLocationManager.currentCityName
+                self.searchFormView.textField.text = LocationManager.sharedLocationManager.currentCityName
             })
         }
     }
