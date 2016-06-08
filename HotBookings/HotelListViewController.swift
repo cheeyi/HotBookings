@@ -41,7 +41,25 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+//        navigationController?.navigationBar.barStyle = .Black
+        navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
+        navigationController?.navigationBar.translucent = false
+
+        view.backgroundColor = UIColor.clearColor()
+        let effect = UIBlurEffect(style: .Light)
+        let blurView = UIVisualEffectView(effect: effect)
+        blurView.frame = self.view.bounds
+        tableView.backgroundView = blurView
+
+//        let vibrancyEffect = UIVibrancyEffect(forBlurEffect: effect)
+//        let vibView = UIVisualEffectView(effect: vibrancyEffect)
+//        vibView.frame = blurView.bounds
+//        vibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+//        blurView.contentView.addSubview(vibView)
+
+        tableView.backgroundColor = UIColor.clearColor()
         view.addSubview(tableView)
         title = "Hotels In \(regionName)"
 
@@ -74,12 +92,16 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdent)
         if cell == nil {
+            let color = UIColor(white: 0.2, alpha: 0.7)
             cell = UITableViewCell(style: .Subtitle, reuseIdentifier: cellIdent)
+            cell?.textLabel?.textColor = color
+            cell?.detailTextLabel?.textColor = color
+            cell?.backgroundColor = UIColor.clearColor()
             let button = UIButton(type: .Custom)
             button.titleLabel?.font = UIFont.systemFontOfSize(12.0)
             button.setTitle("Book Now", forState: .Normal)
             button.setTitleColor(UIColor.jetBlueGrayColor(), forState: .Normal)
-            button.layer.borderColor = UIColor.jetBlueGrayColor().CGColor
+            button.layer.borderColor = color.CGColor
             button.layer.borderWidth = 1.0
             button.layer.cornerRadius = 5.0
             button.sizeToFit()
