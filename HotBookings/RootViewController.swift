@@ -46,32 +46,12 @@ class SearchFormView: UIView {
         let blurEffectView = UIVisualEffectView(effect: blurEffect).withAutoLayout()
         self.addSubview(blurEffectView)
 
-        // Vibrancy Effect
-        //let vibrancyEffect = UIVibrancyEffect(forBlurEffect: blurEffect)
-        //let vibrancyEffectView = UIVisualEffectView(effect: vibrancyEffect).withAutoLayout()
-
         textField.textColor = UIColor(white: 0.2, alpha: 0.7)
         textField.font = UIFont.boldSystemFontOfSize(18.0)
-
-        // Add label to the vibrancy view
-        //vibrancyEffectView.contentView.addSubview(textField)
 
         // Add the vibrancy view to the blur view
         blurEffectView.contentView.addSubview(textField) //vibrancyEffectView)
 
-        // Setup constraints
-/*
-        let r = [
-            "H:|[vibrancyView]|",
-            "V:|[vibrancyView]|",
-            ]
-
-        let v = [
-            "vibrancyView": vibrancyEffectView,
-            ]
-
-        self.addCompactConstraints(r, metrics: nil, views: v as [NSObject : AnyObject])
-*/
         let r1 = [
             "H:|[textField]|",
             "V:|[textField]|",

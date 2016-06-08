@@ -43,7 +43,6 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         
         navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
-//        navigationController?.navigationBar.barStyle = .Black
         navigationController?.navigationBar.barTintColor = UIColor.redEyeColor()
         navigationController?.navigationBar.translucent = false
 
@@ -52,12 +51,6 @@ class HotelListViewController: UIViewController, UITableViewDelegate, UITableVie
         let blurView = UIVisualEffectView(effect: effect)
         blurView.frame = self.view.bounds
         tableView.backgroundView = blurView
-
-//        let vibrancyEffect = UIVibrancyEffect(forBlurEffect: effect)
-//        let vibView = UIVisualEffectView(effect: vibrancyEffect)
-//        vibView.frame = blurView.bounds
-//        vibView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
-//        blurView.contentView.addSubview(vibView)
 
         tableView.backgroundColor = UIColor.clearColor()
         view.addSubview(tableView)
